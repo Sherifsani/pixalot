@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- icons -->
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <!-- fonts -->
+  <!-- css -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- css -->
+  <title>pixalot | Browse your favorite photos</title>
+</head>
+
+<body>
+  <div class="lightbox">
+    <div class="wrapper">
+      <header class="lightbox-header">
+        <div class="photographer">
+          <i class="bx bx-camera"></i>
+          <p></p>
+        </div>
+        <div class="btns">
+          <button class="download">
+            <i class="bx bx-download"></i>
+          </button>
+          <i class="bx bx-x" onclick="closelightbox()"></i>
+        </div>
+      </header>
+      <div class="preview-img">
+        <div class="img">
+          <img src="" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <header class="search-header">
+    <div class="main-h">
+      <div class="header-container">
+        <div class="top-content">
+          <h1>pixalot<span>.</span></h1>
+          <div class="theme-switch">
+            <div class="toggle">
+              <i class="bx bx-sun"></i>
+              <i class="bx bx-moon"></i>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-content">
+          <p>search and download any image within a second on pixalot!</p>
+          <div class="search-bar">
+            <div class="search-icon"><i class="bx bx-search"></i></div>
+            <input type="text" name="search" id="search" placeholder="search pixalot" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="gallery">
+    <ul class="images"></ul>
+    <button class="load-more">Load More</button>
+  </div>
+  <script src="./app.js"></script>
+</body>
+
+</html>

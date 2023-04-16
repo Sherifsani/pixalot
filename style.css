@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.search-header {
+  width: 100%;
+  height: 200px;
+  background: url("./images/hero.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.main-h {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header-container {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  max-width: 800px;
+}
+
+.top-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.theme-switch {
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.toggle {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #010631;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s linear;
+}
+
+.bx-moon {
+  display: none;
+}
+
+.dark {
+  transform: translateX(100%);
+}
+
+.bottom-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.bottom-content p {
+  text-align: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding-left: 15px;
+}
+
+.bx-search {
+  color: #010631;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.search-bar input {
+  border: none;
+  border-radius: 5px;
+  padding: 15px 5px;
+  width: 100%;
+  font-size: 1.1rem;
+  color: black;
+}
+
+input:focus {
+  outline: none;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.images {
+  gap: 15px;
+  columns: 5 340px;
+  margin-top: 50px;
+  max-width: 95%;
+}
+
+.images img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.card {
+  list-style: none;
+  border-radius: 5px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.card:hover .details {
+  bottom: 0;
+}
+
+.load-more {
+  cursor: pointer;
+  color: white;
+  background-color: #010631;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1.04rem;
+  padding: 7px 13px;
+}
+
+.details {
+  position: absolute;
+  bottom: -100px;
+  transition: all 0.2s linear;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.details i {
+  font-size: 1.1rem;
+}
+
+.photographer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.download {
+  border: none;
+  outline: none;
+  background-color: #d07676;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+  display: grid;
+  place-items: center;
+}
+
+.lightbox {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 850px;
+}
+
+.preview-img {
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  max-height: 65vh;
+  max-width: 90vw;
+}
+
+.preview-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.img img {
+  max-width: 100%;
+}
+
+.lightbox header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lightbox .photographer {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.lightbox .photographer p,
+.lightbox .photographer i {
+  color: #010631;
+  font-size: 1.3rem;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btns i {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.bx-x {
+  background-color: grey;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.show {
+  display: block !important;
+}
+
+body.dark-mode {
+  background-color: #010631;
+}
+
+body.dark-mode .search-bar,
+body.dark-mode .search-bar input,
+body.dark-mode .theme-switch {
+  background-color: #010631;
+  color: white;
+}
+
+.body.dark-mode .theme-switch .bx {
+  color: #010631;
+}
+
+body.dark-mode .toggle {
+  background-color: #fff;
+}
+
+.bx-moon {
+  color: #010631;
+}
